@@ -1,0 +1,104 @@
+.menubox {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centerdiv {
+  position: relative;
+  margin-top: 10%;
+}
+
+.hexpos1 {
+  top: 0px;
+  left: 35%;
+}
+
+.hexpos2 {
+  top: 60px;
+  left: 0%;
+}
+
+.hexpos3 {
+  top: 60px;
+  left: 70%;
+}
+
+.hexpos4 {
+  top: 120px;
+  left: 35%;
+}
+
+.hexpos5 {
+  top: 180px;
+  left: 0%;
+}
+
+.hexpos6 {
+  top: 180px;
+  left: 70%;
+}
+
+.hexpos7 {
+  top: 240px;
+  left: 35%;
+}
+
+.hexagon {
+  position: absolute;
+  margin: 0 auto;
+  background-color: #000;
+  text-align: center;
+  border-radius: 10px;
+  width: 110px;
+  height: 69.3px;
+  box-sizing: border-box;
+  transition: all 1s;
+  border: 0.4vh solid #36454F;
+  transform: rotate(90deg);
+}
+
+/* Creating pseudo-class */
+.hexagon:before, .hexagon:after {
+  content: "";
+  border: inherit;
+  position: absolute;
+  background-color: #000;
+  top: -0.5vh;
+  left: -0.5vh;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+/* Align them in such a way
+that they form a hexagon */
+.hexagon:before {
+  transform: rotate(60deg);
+}
+
+.hexagon:after {
+  transform: rotate(-60deg);
+}
+
+.noselect {
+  transform: rotate(-90deg);
+  color: white;
+  margin-top: 21px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /*
+    Introduced in Internet Explorer 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background-color: #28282B;
+}
