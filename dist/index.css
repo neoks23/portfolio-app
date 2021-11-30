@@ -60,6 +60,17 @@
   transform: rotate(90deg);
 }
 
+.hexagon:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.hexagon:hover > p {
+  opacity: 100%;
+  transition: all 1s;
+}
+
 /* Creating pseudo-class */
 .hexagon:before, .hexagon:after {
   content: "";
@@ -85,9 +96,12 @@ that they form a hexagon */
 }
 
 .noselect {
-  transform: rotate(-90deg);
-  color: white;
-  margin-top: 21px;
+  color: #FFE5B3;
+  margin-top: 19px;
+  opacity: 0%;
+  transition: all 1s;
+  font-family: "Roboto";
+  font-size: 22px;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;

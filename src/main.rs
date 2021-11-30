@@ -1,4 +1,5 @@
 use yew::prelude::*;
+use stdweb::*;
 
 enum Msg {
     Add,
@@ -29,23 +30,42 @@ impl Component for Model {
         match msg {
             Msg::Add => {
                 self.value += 2;
+                js!{
+                    var audio = new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky7.mp3");
+                    audio.cloneNode().play();
+                };
+
                 true
             },
             Msg::Subtract => {
                 self.value -= 2;
+                js!{
+                    var audio = new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky8.mp3");
+                    audio.cloneNode().play();
+                };
+
                 true
             },
             Msg::Multiply => {
                 self.value *= 2;
+                js!{
+                    var audio = new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky7.mp3");
+                    audio.cloneNode().play();
+                };
+
                 true
             },
             Msg::Divide =>{
                 self.value /= 2;
+                js!{
+                    var audio = new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky8.mp3");
+                    audio.cloneNode().play();
+                };
+
                 true
             }
         }
     }
-
     fn change(&mut self, _props: Self::Properties) -> ShouldRender {
         // Should only return "true" if new properties are different to
         // previously received properties.
@@ -57,7 +77,7 @@ impl Component for Model {
         html! {
             <div class="centerdiv">
                 <div class="menubox">
-                    <div class="hexagon normalHexSize hexpos1" onclick=self.link.callback(|_| Msg::Add)>
+                    <div class="hexagon normalHexSize hexpos1" onclick=self.link.callback(|_| Msg::Add) >
                         <p class="noselect">{ format!("+ {} +", self.value)  }</p>
                     </div>
                     <div class="hexagon normalHexSize hexpos2" onclick=self.link.callback(|_| Msg::Subtract)>
@@ -80,7 +100,6 @@ impl Component for Model {
                     </div>
                 </div>
             </div>
-
         }
     }
 }
