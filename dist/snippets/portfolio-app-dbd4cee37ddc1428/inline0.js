@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_d0dc1938062d39cdb8aab310fb2e30d4b746021e(Module) { var audio=new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky8.mp3");audio.cloneNode().play(); }
+export function __cargo_web_snippet_6f0afbe949f803af580ee7097e261f0618caeece(Module) { var audio=new Audio("../../../assets/UI_Quirky10.mp3");audio.cloneNode().play(); }

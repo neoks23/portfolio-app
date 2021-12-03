@@ -31,7 +31,7 @@ impl Component for Model {
             Msg::Add => {
                 self.value += 2;
                 js!{
-                    var audio = new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky7.mp3");
+                    var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                     audio.cloneNode().play();
                 };
 
@@ -40,7 +40,7 @@ impl Component for Model {
             Msg::Subtract => {
                 self.value -= 2;
                 js!{
-                    var audio = new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky8.mp3");
+                    var audio = new Audio("../../../assets/UI_Quirky8.mp3");
                     audio.cloneNode().play();
                 };
 
@@ -49,7 +49,7 @@ impl Component for Model {
             Msg::Multiply => {
                 self.value *= 2;
                 js!{
-                    var audio = new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky7.mp3");
+                    var audio = new Audio("../../../assets/UI_Quirky9.mp3");
                     audio.cloneNode().play();
                 };
 
@@ -58,7 +58,7 @@ impl Component for Model {
             Msg::Divide =>{
                 self.value /= 2;
                 js!{
-                    var audio = new Audio("https://soundimage.org/wp-content/uploads/2016/04/UI_Quirky8.mp3");
+                    var audio = new Audio("../../../assets/UI_Quirky10.mp3");
                     audio.cloneNode().play();
                 };
 
