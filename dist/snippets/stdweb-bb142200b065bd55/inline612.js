@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_c2d0c8a5f47a05f6493b0827d595bc8fcb337833(Module, $0) { $0 = Module.STDWEB_PRIVATE.to_js($0);($0).selectedIndex=-1; }
+export function __cargo_web_snippet_53150158ce82001ec0660dff86b1909a0f49cea2(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).setMinutes(($1)); }

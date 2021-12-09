@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_746a8ddf02bc0719dc4c4ade2099ced969ad640c(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).tiltY;})()); }
+export function __cargo_web_snippet_c2d0c8a5f47a05f6493b0827d595bc8fcb337833(Module, $0) { $0 = Module.STDWEB_PRIVATE.to_js($0);($0).selectedIndex=-1; }

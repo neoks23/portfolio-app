@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_9f22d4ca7bc938409787341b7db181f8dd41e6df(Module, $0) { Module.STDWEB_PRIVATE.increment_refcount( $0 ); }
+export function __cargo_web_snippet_3c6a01294891795b149ab0de0b0654d90e5844fe(Module, $0) { var r = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (r instanceof DOMException) && (r.name === "AbortError"); }

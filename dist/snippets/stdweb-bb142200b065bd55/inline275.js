@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_ac8cb6d0ff80d3c34a72ce0b1b210fd4d8e921df(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).extensions;})()); }
+export function __cargo_web_snippet_97495987af1720d8a9a923fa4683a7b683e3acd6(Module, $0, $1) { console.error( 'Panic error message:', Module.STDWEB_PRIVATE.to_js_string( $0, $1 ) ); }

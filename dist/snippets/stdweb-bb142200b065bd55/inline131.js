@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_b6bdbc5ea620c57d3dbc5af2d2f7357276748675(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof MutationObserver); }
+export function __cargo_web_snippet_5c57e16ebd22655f976d87fae8039e282d7bab59(Module, $0) { Module.STDWEB_PRIVATE.from_js($0, (function(){return Array.from(navigator.getGamepads());})()); }

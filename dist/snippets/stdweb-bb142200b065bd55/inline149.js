@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_f765b15a1a1b5cd266e922e6fca98dd570f17edc(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).textContent=($1); }
+export function __cargo_web_snippet_6b9a66bdade0f87763d1402790fb3d17c2edf225(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof TouchEvent && o.type === "touchmove"); }

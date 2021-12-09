@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_74826961daf3d2c4eaad2d3f0cc83e4fcc5c8de8(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof MouseEvent && o.type === "mousemove"); }
+export function __cargo_web_snippet_31f6071b77215fa0db4e2754d20833403f06a364(Module, $0) { var r = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (r instanceof DOMException) && (r.name === "InvalidAccessError"); }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_bc04f52a15f9266df42b58560c61c0334da0ada1(Module, $0) { return Module.STDWEB_PRIVATE.acquire_rust_reference( new Uint16Array( Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) ) ); }
+export function __cargo_web_snippet_1cd2480577300069ee180a301b489813d9497d49(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).drawFocusIfNeeded(($1)); }

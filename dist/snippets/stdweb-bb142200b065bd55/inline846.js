@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_9d895241da80399cceda3b44e73846d885be6e50(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).setMonth(($1)); }
+export function __cargo_web_snippet_de3aac2800e03fdde3f10b766c9a16edfb3b4be0(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof BeforeUnloadEvent && o.type === "beforeunload"); }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_ca516838206a1a6909a08b0e73f7d59b13cb0b40(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof NodeList); }
+export function __cargo_web_snippet_7f5757aca90a3aa6af9515d88e3e82a09d32a019(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).scrollLeft=($1); }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_5ce1fc8571a631e9d5eef637bd0f99551e6dac9f(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).getUTCDate();})()); }
+export function __cargo_web_snippet_f5862664124493d42265c5adc12fa53cefa6b2ca(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).cancelBubble=($1); }

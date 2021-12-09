@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_8b7cc1a90ecd19ea6290d7d0a840fd125dd3febb(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Event && o.type === "resize"); }
+export function __cargo_web_snippet_2682cf5dba376aaf776ca50b2a181db54cbbf305(Module, $0, $1, $2, $3) { $1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);Module.STDWEB_PRIVATE.from_js($0, (function(){try{($1).addColorStop(($2),($3));return{success:true};}catch(error){return{error:error,success:false};}})()); }

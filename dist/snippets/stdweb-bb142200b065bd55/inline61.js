@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_aa5f82b91baa16d8f7102b6cc54005b8841bcd45(Module, $0) { return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof Int8Array) | 0; }
+export function __cargo_web_snippet_dc8e7bbf6495cc2abd8497d69efceb13d03d30d7(Module, $0, $1, $2, $3, $4) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);$4 = Module.STDWEB_PRIVATE.to_js($4);($0).clearRect(($1),($2),($3),($4)); }
