@@ -1,0 +1,1 @@
+export function __cargo_web_snippet_4147ead6170d420167b8db84d2209f8824dcc22b(Module) { window.open("https://www.linkedin.com/in/koen-sampers-8345741a5/","_blank"); }

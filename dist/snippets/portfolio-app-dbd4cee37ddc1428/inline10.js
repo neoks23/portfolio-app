@@ -1,0 +1,1 @@
+export function __cargo_web_snippet_d3300c08c291f0185b92fb25e0a44e6cba083224(Module) { window.open("https://www.snapchat.com/add/koensa1","_blank"); }

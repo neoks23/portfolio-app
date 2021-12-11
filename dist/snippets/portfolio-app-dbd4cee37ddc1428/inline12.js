@@ -1,0 +1,1 @@
+export function __cargo_web_snippet_c33675864f3b1f40b02bde805b789d422237af4d(Module) { window.open("https://www.youtube.com/channel/UCoqfYvqcMCGoYMc8rNAXPBg","_blank"); }
