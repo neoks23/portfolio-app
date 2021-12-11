@@ -8,8 +8,10 @@ pub struct AppRouter {}
 
 #[derive(Switch, Debug, Clone)]
 pub enum AppRoute {
-    #[to = "/testpage"]
-    Test,
+    #[to = "/me"]
+    Me,
+    #[to = "/software"]
+    Software,
     #[to = "/"]
     Index,
 }
@@ -33,7 +35,8 @@ impl Component for AppRouter {
 
     fn view(&self) -> Html {
         let render_func = Router::render(|route: AppRoute| match route {
-            AppRoute::Test => html! { <pages::TestPage/> },
+            AppRoute::Me => html!{ <pages::Me/> },
+            AppRoute::Software => html! { <pages::Software/> },
             AppRoute::Index => html! { <pages::Home/> },
         });
 

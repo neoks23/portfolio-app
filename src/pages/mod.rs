@@ -1,4 +1,7 @@
 pub mod home;
-pub mod testpage;
+pub mod software;
+pub mod me;
+
 pub use self::home::Home;
-pub use self::testpage::TestPage;
+pub use self::software::Software;
+pub use self::me::Me;

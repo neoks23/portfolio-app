@@ -46,7 +46,9 @@ impl Component for Home {
                         window.open("https://www.youtube.com/channel/UCoqfYvqcMCGoYMc8rNAXPBg", "_blank");
                     }
                 } else {
-
+                    js!{
+                        location.href = "/me";
+                    }
                 }
                 true
             },
@@ -61,7 +63,9 @@ impl Component for Home {
                         window.open("https://www.snapchat.com/add/koensa1", "_blank");
                     }
                 } else {
-
+                    js!{
+                        location.href = "/software";
+                    }
                 }
                 true
             },
@@ -176,7 +180,6 @@ impl Component for Home {
     fn view(&self) -> Html {
         html! {
             <>
-                <Link route=AppRoute::Test>{"Test"}</Link>
                 <div class="centerdiv">
                     <div class="menubox">
                         <div class="hexagon normalHexSize hexpos1" onclick=self.link.callback(|_| Msg::P1YT) >

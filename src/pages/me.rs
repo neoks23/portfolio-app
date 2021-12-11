@@ -2,14 +2,14 @@ use yew::prelude::*;
 use stdweb::*;
 use crate::app_router::{AppRoute, Link};
 
-pub struct TestPage {
+pub struct Me {
     // `ComponentLink` is like a reference to a component.
     // It can be used to send messages to the component
     link: ComponentLink<Self>,
     value: i64,
 }
 
-impl Component for TestPage {
+impl Component for Me {
     type Message = ();
     type Properties = ();
 
@@ -33,7 +33,8 @@ impl Component for TestPage {
     fn view(&self) -> Html {
         html! {
             <>
-                <Link route=AppRoute::Index>{"Home"}</Link>
+                <Link route=AppRoute::Index>{"Back to home panel"}</Link>
+                <Link route=AppRoute::Software>{"Next slide"}</Link>
             </>
         }
     }

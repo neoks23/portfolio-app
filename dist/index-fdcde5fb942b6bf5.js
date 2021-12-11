@@ -1,7 +1,9 @@
 import { __cargo_web_snippet_c68b38c839c5cf912d46929ebb6d530926a338ea } from './snippets/portfolio-app-dbd4cee37ddc1428/inline0.js';
 import { __cargo_web_snippet_8f09779db93b4697847b3e749a94a1f8aaba3eb7 } from './snippets/portfolio-app-dbd4cee37ddc1428/inline1.js';
-import { __cargo_web_snippet_d3300c08c291f0185b92fb25e0a44e6cba083224 } from './snippets/portfolio-app-dbd4cee37ddc1428/inline10.js';
-import { __cargo_web_snippet_c33675864f3b1f40b02bde805b789d422237af4d } from './snippets/portfolio-app-dbd4cee37ddc1428/inline12.js';
+import { __cargo_web_snippet_a31c2df99dbfbea6aa17e74c10de8ed6227299a8 } from './snippets/portfolio-app-dbd4cee37ddc1428/inline10.js';
+import { __cargo_web_snippet_d3300c08c291f0185b92fb25e0a44e6cba083224 } from './snippets/portfolio-app-dbd4cee37ddc1428/inline11.js';
+import { __cargo_web_snippet_5ee4450cef22796667135b1a0ecab3076b0642ff } from './snippets/portfolio-app-dbd4cee37ddc1428/inline13.js';
+import { __cargo_web_snippet_c33675864f3b1f40b02bde805b789d422237af4d } from './snippets/portfolio-app-dbd4cee37ddc1428/inline14.js';
 import { __cargo_web_snippet_f73d74e1daca6867934fa7e3d0af2f81375feec7 } from './snippets/portfolio-app-dbd4cee37ddc1428/inline2.js';
 import { __cargo_web_snippet_4147ead6170d420167b8db84d2209f8824dcc22b } from './snippets/portfolio-app-dbd4cee37ddc1428/inline4.js';
 import { __cargo_web_snippet_dde41c57e3e12fe6715329b1be3ecb5968afdf88 } from './snippets/portfolio-app-dbd4cee37ddc1428/inline6.js';
@@ -305,7 +307,7 @@ async function load(module, imports) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('index-62c13d35a6233c9e_bg.wasm', import.meta.url);
+        input = new URL('index-fdcde5fb942b6bf5_bg.wasm', import.meta.url);
     }
     const imports = {};
     imports.wbg = {};
@@ -346,8 +348,14 @@ async function init(input) {
     imports.wbg.__wbg_cargowebsnippetcf5a3f8a891386149753d13a467ab671499cfcfb_22a43b233f9c0e8f = function(arg0) {
         __cargo_web_snippet_cf5a3f8a891386149753d13a467ab671499cfcfb(takeObject(arg0));
     };
+    imports.wbg.__wbg_cargowebsnippeta31c2df99dbfbea6aa17e74c10de8ed6227299a8_215a0ef7765091f3 = function(arg0) {
+        __cargo_web_snippet_a31c2df99dbfbea6aa17e74c10de8ed6227299a8(takeObject(arg0));
+    };
     imports.wbg.__wbg_cargowebsnippetd3300c08c291f0185b92fb25e0a44e6cba083224_e11eb623f4c0c419 = function(arg0) {
         __cargo_web_snippet_d3300c08c291f0185b92fb25e0a44e6cba083224(takeObject(arg0));
+    };
+    imports.wbg.__wbg_cargowebsnippet5ee4450cef22796667135b1a0ecab3076b0642ff_9c35644a1b7b6ff6 = function(arg0) {
+        __cargo_web_snippet_5ee4450cef22796667135b1a0ecab3076b0642ff(takeObject(arg0));
     };
     imports.wbg.__wbg_cargowebsnippetc33675864f3b1f40b02bde805b789d422237af4d_34e24a63f0138785 = function(arg0) {
         __cargo_web_snippet_c33675864f3b1f40b02bde805b789d422237af4d(takeObject(arg0));
@@ -615,16 +623,16 @@ async function init(input) {
         var ret = wasm.__wbindgen_export_2;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper3773 = function(arg0, arg1, arg2) {
-        var ret = makeClosure(arg0, arg1, 173, __wbg_adapter_22);
+    imports.wbg.__wbindgen_closure_wrapper3973 = function(arg0, arg1, arg2) {
+        var ret = makeClosure(arg0, arg1, 185, __wbg_adapter_22);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper3775 = function(arg0, arg1, arg2) {
-        var ret = makeClosure(arg0, arg1, 175, __wbg_adapter_25);
+    imports.wbg.__wbindgen_closure_wrapper3975 = function(arg0, arg1, arg2) {
+        var ret = makeClosure(arg0, arg1, 187, __wbg_adapter_25);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper4905 = function(arg0, arg1, arg2) {
-        var ret = makeMutClosure(arg0, arg1, 209, __wbg_adapter_28);
+    imports.wbg.__wbindgen_closure_wrapper5105 = function(arg0, arg1, arg2) {
+        var ret = makeMutClosure(arg0, arg1, 221, __wbg_adapter_28);
         return addHeapObject(ret);
     };
 
