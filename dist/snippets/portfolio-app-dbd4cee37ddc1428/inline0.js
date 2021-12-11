@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_6f0afbe949f803af580ee7097e261f0618caeece(Module) { var audio=new Audio("../../../assets/UI_Quirky10.mp3");audio.cloneNode().play(); }
+export function __cargo_web_snippet_c68b38c839c5cf912d46929ebb6d530926a338ea(Module) { window.open("https://github.com/neoks23","_blank"); }
