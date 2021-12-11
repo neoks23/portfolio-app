@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_40da4492ccc190ba3b9787041b4fdd686b6d1dab(Module) { var audio=new Audio("../../../assets/UI_Quirky8.mp3");audio.cloneNode().play(); }
+export function __cargo_web_snippet_f73d74e1daca6867934fa7e3d0af2f81375feec7(Module) { window.open("https://discord.gg/nxvjnHrr","_blank"); }

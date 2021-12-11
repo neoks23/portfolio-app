@@ -1,3 +1,5 @@
+#![recursion_limit = "1024"]
+
 use yew::prelude::*;
 use stdweb::*;
 mod pages;

@@ -8,7 +8,7 @@
 
 .centerdiv {
   position: relative;
-  margin-top: 10%;
+  margin-top: 12%;
 }
 
 .hexpos1 {
@@ -71,6 +71,16 @@
   transition: all 1s;
 }
 
+.hexagon:hover > div > p {
+  opacity: 100%;
+  transition: all 1s;
+}
+
+.hexagon:hover > img {
+  opacity: 100%;
+  transition: all 1s;
+}
+
 /* Creating pseudo-class */
 .hexagon:before, .hexagon:after {
   content: "";
@@ -95,13 +105,57 @@ that they form a hexagon */
   transform: rotate(-60deg);
 }
 
-.noselect {
-  color: #FFE5B3;
-  margin-top: 19px;
+#heximg7 {
+  filter: invert(46%) sepia(48%) saturate(5809%) hue-rotate(344deg) brightness(105%) contrast(99%);
+}
+
+.heximg {
+  filter: invert(85%) sepia(36%) saturate(311%) hue-rotate(343deg) brightness(102%) contrast(101%);
+  margin-top: -52px;
+  margin-left: -16px;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0%;
+  transition: opacity 1s;
+  font-family: "Roboto";
+  font-size: 22px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /*
+    Introduced in Internet Explorer 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.image {
+  filter: invert(85%) sepia(36%) saturate(311%) hue-rotate(343deg) brightness(102%) contrast(101%);
+  margin-top: 15px;
   opacity: 0%;
   transition: all 1s;
   font-family: "Roboto";
   font-size: 22px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  /*
+    Introduced in Internet Explorer 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.noselect {
+  color: #FFE5B3;
+  margin-top: 19px;
+  opacity: 0%;
+  visibility: visible;
+  font-family: "Roboto";
+  font-size: 22px;
+  transition: opacity 1s;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
