@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_5acd702f93bb4304e9759f941189e7b4b7d68da1(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return new MutationObserver(($1));})()); }
+export function __cargo_web_snippet_0867f5b2273d6da5a18fcbfa2f3fac147e45af7e(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof MouseEvent && o.type === "mouseover"); }

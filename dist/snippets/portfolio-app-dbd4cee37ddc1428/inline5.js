@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_8f09779db93b4697847b3e749a94a1f8aaba3eb7(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play(); }
+export function __cargo_web_snippet_31d3816c58be7e6e6a0ea5e7555420abd38a3541(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://www.instagram.com/koensa1/","_blank"); }

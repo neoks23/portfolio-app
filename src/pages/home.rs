@@ -18,7 +18,7 @@ pub struct Home {
     // `ComponentLink` is like a reference to a component.
     // It can be used to send messages to the component
     value: i64,
-    smVisible: bool,
+    sm_visible: bool,
 }
 
 impl Component for Home {
@@ -29,7 +29,7 @@ impl Component for Home {
         Self {
 
             value: 0,
-            smVisible: false,
+            sm_visible: false,
         }
     }
 
@@ -39,53 +39,29 @@ impl Component for Home {
                 js! {
                     var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                     audio.cloneNode().play();
+                    window.open("https://www.youtube.com/channel/UCoqfYvqcMCGoYMc8rNAXPBg", "_blank");
                 };
-                if self.smVisible {
-                    js!{
-                        window.open("https://www.youtube.com/channel/UCoqfYvqcMCGoYMc8rNAXPBg", "_blank");
-                    }
-                } else {
-                    js!{
-                        location.href = "/me";
-                    }
-                }
                 true
             },
             Msg::P2SC => {
                 js! {
                     var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                     audio.cloneNode().play();
+                    window.open("https://www.snapchat.com/add/koensa1", "_blank");
                 };
-
-                if self.smVisible {
-                    js!{
-                        window.open("https://www.snapchat.com/add/koensa1", "_blank");
-                    }
-                } else {
-                    js!{
-                        location.href = "/software";
-                    }
-                }
                 true
             },
             Msg::P3IG => {
                 js! {
                     var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                     audio.cloneNode().play();
+                    window.open("https://www.instagram.com/koensa1/", "_blank");
                 };
-
-                if self.smVisible {
-                    js!{
-                        window.open("https://www.instagram.com/koensa1/", "_blank");
-                    }
-                } else {
-
-                }
                 true
             },
             Msg::SMToggle => {
-                self.smVisible = !self.smVisible;
-                if self.smVisible{
+                self.sm_visible = !self.sm_visible;
+                if self.sm_visible {
                     js!{
                         var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                         audio.cloneNode().play();
@@ -104,7 +80,7 @@ impl Component for Home {
                     };
                 }
 
-                if !self.smVisible {
+                if !self.sm_visible {
                     js!{
                         var audio = new Audio("../../../assets/UI_Quirky8.mp3");
                         audio.cloneNode().play();
@@ -129,60 +105,46 @@ impl Component for Home {
                 js! {
                     var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                     audio.cloneNode().play();
+                    window.open("https://www.linkedin.com/in/koen-sampers-8345741a5/", "_blank");
                 };
-
-                if self.smVisible {
-                    js!{
-                        window.open("https://www.linkedin.com/in/koen-sampers-8345741a5/", "_blank");
-                    }
-                } else {
-
-                }
                 true
             }
             Msg::P5DISC => {
                 js! {
                     var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                     audio.cloneNode().play();
+                    window.open("https://discord.gg/nxvjnHrr", "_blank");
                 };
-
-                if self.smVisible {
-                    js!{
-                        window.open("https://discord.gg/nxvjnHrr", "_blank");
-                    }
-                } else {
-
-                }
                 true
             }
             Msg::P6GIT => {
                 js! {
                     var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                     audio.cloneNode().play();
+                    window.open("https://github.com/neoks23", "_blank");
                 };
-
-                if self.smVisible {
-                    js!{
-                        window.open("https://github.com/neoks23", "_blank");
-                    }
-                } else {
-
-                }
                 true
             }
         }
     }
     fn view(&self, ctx: &Context<Self>) -> Html {
 
+        let history =  ctx.link().history().unwrap();
+        let me_history = history.clone();
+        let software_history = history.clone();
+        let me = Callback::once(move |_| me_history.push(AppRoute::Me));
+        let software = Callback::once(move |_| software_history.push(AppRoute::Software));
+
+
         html! {
             <>
                 <div class="centerdiv">
                     <div class="menubox">
-                        <div class="hexagon normalHexSize hexpos1" onclick={ctx.link().callback(|_| Msg::P1YT)} >
+                        <div class="hexagon normalHexSize hexpos1" onclick={if self.sm_visible { ctx.link().callback(|_| Msg::P1YT)} else {me}} >
                             <p id="hextext1" class="noselect">{ "1"  }</p>
                             <img id="heximg1" src="../../../assets/images/youtube-64x64-3649993.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos2" onclick={ctx.link().callback(|_| Msg::P2SC)}>
+                        <div class="hexagon normalHexSize hexpos2" onclick={if self.sm_visible {ctx.link().callback(|_| Msg::P2SC)} else {software}}>
                             <p id="hextext2" class="noselect">{ "2"  }</p>
                             <img id="heximg2" src="../../../assets/images/snapchat-64x64-3649983.png" alt="globe" width="32px" class="heximg" />
                         </div>

@@ -1,8 +1,7 @@
 use yew::prelude::*;
 use stdweb::*;
 use crate::app_router::{AppRoute};
-use yew_router::prelude::Link;
-
+use yew_router::prelude::*;
 
 pub struct Me {
     // `ComponentLink` is like a reference to a component.
@@ -25,10 +24,17 @@ impl Component for Me {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
+
+        let history =  ctx.link().history().unwrap();
+        let home_history = history.clone();
+        let software_history = history.clone();
+        let home = Callback::once(move |_| home_history.push(AppRoute::Index));
+        let software = Callback::once(move |_| software_history.push(AppRoute::Software));
+
         html! {
             <>
-                <Link<AppRoute> to={AppRoute::Index}>{"Back to home panel"}</Link<AppRoute>>
-                <Link<AppRoute> to={AppRoute::Software}>{"Next slide"}</Link<AppRoute>>
+                <button onclick = {home}>{"Go Home"}</button>
+                <button onclick = {software}>{"Go to next slide"}</button>
             </>
         }
     }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_02c23d1e0205d57c24c4bfd5119fc9b4fb8394b9(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof FocusEvent && o.type === "focus"); }
+export function __cargo_web_snippet_8a7df5b395d648a3e04f9d703ed134025303ed48(Module, $0) { return Module.STDWEB_PRIVATE.acquire_rust_reference( new Float32Array( Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) ) ); }

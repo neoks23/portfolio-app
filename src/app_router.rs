@@ -37,7 +37,6 @@ impl Component for AppRouter {
         false
     }
 
-
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
             <BrowserRouter>
