@@ -1,11 +1,11 @@
 use yew::prelude::*;
 use stdweb::*;
-use crate::app_router::{AppRoute, Link};
+use crate::app_router::{AppRoute};
+use yew_router::prelude::Link;
 
 pub struct Software {
     // `ComponentLink` is like a reference to a component.
     // It can be used to send messages to the component
-    link: ComponentLink<Self>,
     value: i64,
 }
 
@@ -13,28 +13,21 @@ impl Component for Software {
     type Message = ();
     type Properties = ();
 
-    fn create(_props: Self::Properties, link: ComponentLink<Self>) -> Self {
+    fn create(_ctx: &Context<Self>) -> Self {
         Self {
-            link,
             value: 0,
         }
     }
 
-    fn update(&mut self, msg: Self::Message) -> ShouldRender {
-        false
-    }
-    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
-        // Should only return "true" if new properties are different to
-        // previously received properties.
-        // This component has no properties so we will always return "false".
+    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
         false
     }
 
-    fn view(&self) -> Html {
+    fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
             <>
-                <Link route=AppRoute::Me>{"Previous slide"}</Link>
-                <Link route=AppRoute::Index>{"Back to home panel"}</Link>
+                <Link<AppRoute> to={AppRoute::Me}>{"Previous slide"}</Link<AppRoute>>
+                <Link<AppRoute> to={AppRoute::Index}>{"Back to home panel"}</Link<AppRoute>>
             </>
         }
     }

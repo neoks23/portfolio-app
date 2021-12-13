@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_0e54fd9c163fcf648ce0a395fde4500fd167a40b(Module, $0) { var r = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (r instanceof DOMException) && (r.name === "InvalidCharacterError"); }
+export function __cargo_web_snippet_26712f6805619f0d26e13aab9051d88fa5a21635(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).mode;})()); }

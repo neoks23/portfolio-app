@@ -160,3 +160,34 @@ that they form a hexagon */
 body{
     background-color: #28282B;
 }
+
+// NOT MADE BY MYSELF
+
+
+.hero {
+    &.has-background {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &-background {
+        position: absolute;
+        object-fit: cover;
+        object-position: bottom;
+        width: 100%;
+        height: 100%;
+
+        &.is-transparent {
+            opacity: 0.3;
+        }
+    }
+}
+
+.burger {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-brand {
+    align-items: center;
+}

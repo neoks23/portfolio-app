@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_197921fca8e07ce0624bf80e161458987074ef8a(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).scrollLeft;})()); }
+export function __cargo_web_snippet_74826961daf3d2c4eaad2d3f0cc83e4fcc5c8de8(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof MouseEvent && o.type === "mousemove"); }

@@ -3,45 +3,46 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 use crate::pages;
+use yew_router::__macro::Router;
 
 pub struct AppRouter {}
 
-#[derive(Switch, Debug, Clone)]
+#[derive(Routable, PartialEq, Debug, Clone)]
 pub enum AppRoute {
-    #[to = "/me"]
+    #[at("/me")]
     Me,
-    #[to = "/software"]
+    #[at("/software")]
     Software,
-    #[to = "/"]
+    #[at("/")]
     Index,
 }
 
-pub type Link = RouterAnchor<AppRoute>;
+pub fn switch_main(route: &AppRoute) -> Html{
+    match route.clone() {
+        AppRoute::Me => html!{ <pages::Me/> },
+        AppRoute::Software => html! { <pages::Software/> },
+        AppRoute::Index => html! { <pages::Home/> },
+    }
+}
+//pub type Link = RouterAnchor<AppRoute>;
 
 impl Component for AppRouter {
     type Message = ();
     type Properties = ();
-    fn create(_: Self::Properties, link: ComponentLink<Self>) -> Self {
+    fn create(_ctx: &Context<Self>) -> Self {
         Self {}
     }
 
-    fn update(&mut self, msg: Self::Message) -> ShouldRender {
+    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
         false
     }
 
-    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
-        false
-    }
 
-    fn view(&self) -> Html {
-        let render_func = Router::render(|route: AppRoute| match route {
-            AppRoute::Me => html!{ <pages::Me/> },
-            AppRoute::Software => html! { <pages::Software/> },
-            AppRoute::Index => html! { <pages::Home/> },
-        });
-
+    fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <Router<AppRoute, ()> render=render_func/>
+            <BrowserRouter>
+                <Switch<AppRoute> render={Switch::render(switch_main)} />
+            </BrowserRouter>
         }
     }
 }

@@ -2,7 +2,7 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 use stdweb::*;
-use crate::app_router::{AppRoute, Link};
+use crate::app_router::{AppRoute};
 
 pub enum Msg {
     P1YT,
@@ -17,7 +17,6 @@ pub enum Msg {
 pub struct Home {
     // `ComponentLink` is like a reference to a component.
     // It can be used to send messages to the component
-    link: ComponentLink<Self>,
     value: i64,
     smVisible: bool,
 }
@@ -26,15 +25,15 @@ impl Component for Home {
     type Message = Msg;
     type Properties = ();
 
-    fn create(_props: Self::Properties, link: ComponentLink<Self>) -> Self {
+    fn create(_ctx: &Context<Self>) -> Self {
         Self {
-            link,
+
             value: 0,
             smVisible: false,
         }
     }
 
-    fn update(&mut self, msg: Self::Message) -> ShouldRender {
+    fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
         match msg {
             Msg::P1YT => {
                 js! {
@@ -83,7 +82,7 @@ impl Component for Home {
 
                 }
                 true
-            }
+            },
             Msg::SMToggle => {
                 self.smVisible = !self.smVisible;
                 if self.smVisible{
@@ -103,7 +102,9 @@ impl Component for Home {
                         document.getElementById("hextext7").style.visibility = "hidden";
                         document.getElementById("heximg7").style.visibility = "visible";
                     };
-                } else {
+                }
+
+                if !self.smVisible {
                     js!{
                         var audio = new Audio("../../../assets/UI_Quirky8.mp3");
                         audio.cloneNode().play();
@@ -171,44 +172,39 @@ impl Component for Home {
             }
         }
     }
-    fn change(&mut self, _props: Self::Properties) -> ShouldRender {
-        // Should only return "true" if new properties are different to
-        // previously received properties.
-        // This component has no properties so we will always return "false".
-        false
-    }
-    fn view(&self) -> Html {
+    fn view(&self, ctx: &Context<Self>) -> Html {
+
         html! {
             <>
                 <div class="centerdiv">
                     <div class="menubox">
-                        <div class="hexagon normalHexSize hexpos1" onclick=self.link.callback(|_| Msg::P1YT) >
+                        <div class="hexagon normalHexSize hexpos1" onclick={ctx.link().callback(|_| Msg::P1YT)} >
                             <p id="hextext1" class="noselect">{ "1"  }</p>
-                            <img id="heximg1" src="../../../assets/logos2/social-media-222/png-64/youtube-64x64-3649993.png" alt="globe" width="32px" class="heximg"/>
+                            <img id="heximg1" src="../../../assets/images/youtube-64x64-3649993.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos2" onclick=self.link.callback(|_| Msg::P2SC)>
+                        <div class="hexagon normalHexSize hexpos2" onclick={ctx.link().callback(|_| Msg::P2SC)}>
                             <p id="hextext2" class="noselect">{ "2"  }</p>
-                            <img id="heximg2" src="../../../assets/logos2/social-media-222/png-64/snapchat-64x64-3649983.png" alt="globe" width="32px" class="heximg"/>
+                            <img id="heximg2" src="../../../assets/images/snapchat-64x64-3649983.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos3" onclick=self.link.callback(|_| Msg::P3IG)>
+                        <div class="hexagon normalHexSize hexpos3" onclick={ctx.link().callback(|_| Msg::P3IG)}>
                             <p id="hextext3" class="noselect">{ "3" }</p>
-                            <img id="heximg3" src="../../../assets/logos2/social-media-222/png-64/instagram-64x64-3649976.png" alt="globe" width="32px" class="heximg"/>
+                            <img id="heximg3" src="../../../assets/images/instagram-64x64-3649976.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos4"  onclick=self.link.callback(|_| Msg::SMToggle)>
-                            <img src="../../../assets/logos2/social-media-222/png-64/dribbble-64x64-3649973.png" alt="globe" width="32px" class="image"/>
+                        <div class="hexagon normalHexSize hexpos4"  onclick={ctx.link().callback(|_| Msg::SMToggle)}>
+                            <img src="../../../assets/images/dribbble-64x64-3649973.png" alt="globe" width="32px" class="image" />
                         </div>
 
-                        <div class="hexagon normalHexSize hexpos5" onclick=self.link.callback(|_| Msg::P4LI)>
+                        <div class="hexagon normalHexSize hexpos5" onclick={ctx.link().callback(|_| Msg::P4LI)}>
                             <p id="hextext5" class="noselect">{ "5"  }</p>
-                            <img id="heximg5" src="../../../assets/logos2/social-media-222/png-64/linkedin-64x64-3649977.png" alt="globe" width="32px" class="heximg"/>
+                            <img id="heximg5" src="../../../assets/images/linkedin-64x64-3649977.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos6" onclick=self.link.callback(|_| Msg::P5DISC)>
+                        <div class="hexagon normalHexSize hexpos6" onclick={ctx.link().callback(|_| Msg::P5DISC)}>
                             <p id="hextext6" class="noselect">{ "6"  }</p>
-                            <img id="heximg6" src="../../../assets/logos2/social-media-222/png-64/discord-64x64-3649972.png" alt="globe" width="32px" class="heximg"/>
+                            <img id="heximg6" src="../../../assets/images/discord-64x64-3649972.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos7" onclick=self.link.callback(|_| Msg::P6GIT)>
+                        <div class="hexagon normalHexSize hexpos7" onclick={ctx.link().callback(|_| Msg::P6GIT)}>
                             <p id="hextext7" class="noselect">{ "7" }</p>
-                            <img id="heximg7" src="../../../assets/images/github.png" alt="globe" width="32px" class="heximg"/>
+                            <img id="heximg7" src="../../../assets/images/github.png" alt="globe" width="32px" class="heximg" />
                         </div>
                     </div>
                 </div>
