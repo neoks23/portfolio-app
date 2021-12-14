@@ -98,6 +98,22 @@ that they form a hexagon */
     transform: rotate(-60deg);
 }
 
+.about-me{
+    margin-left: 25%;
+    margin-top: 100px;
+    width: 50%;
+    height: 300px;
+    border-radius: 20px;
+    border: 2px solid #36454F;
+    background-color: #262626;
+    color: #FFE5B3;
+    text-align: left;
+}
+
+.nav-button{
+    margin-left: 13px;
+}
+
 #heximg7{
     filter: invert(46%) sepia(48%) saturate(5809%) hue-rotate(344deg) brightness(105%) contrast(99%);
 }

@@ -33,14 +33,20 @@ impl Component for Me {
 
         html! {
             <>
-                <nav class="navbar navbar-dark bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <Link<AppRoute> classes={"navbar-brand"} to={AppRoute::Index}>
                         <img src="../../../assets/images/bootstrap.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
                         {" Bootstrap"}
                     </Link<AppRoute>>
-                    <button class="btn btn-primary btn-rounded btn-sm" onclick = {home}>{"Go Home"}</button>
-                    <button class="btn btn-primary btn-rounded btn-sm" onclick = {software}>{"Go to next slide"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Go Home"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Go to next slide"}</button>
                 </nav>
+
+                <div class="about-me">
+                  <h1>{"My First Bootstrap Page"}</h1>
+                  <p>{"This is some text."}</p>
+
+                </div>
             </>
         }
     }

@@ -31,10 +31,14 @@ impl Component for Software {
         let me = Callback::once(move |_| me_history.push(AppRoute::Me));
 
         html! {
-            <>
-                <button onclick = {me}>{"Go to previous slide"}</button>
-                <button onclick = {home}>{"Go Home"}</button>
-            </>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <Link<AppRoute> classes={"navbar-brand"} to={AppRoute::Index}>
+                    <img src="../../../assets/images/bootstrap.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
+                    {" Bootstrap"}
+                </Link<AppRoute>>
+                <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Go Home"}</button>
+                <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {me}>{"Go to previous slide"}</button>
+            </nav>
         }
     }
 }
