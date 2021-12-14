@@ -44,12 +44,15 @@
     background-color: #000;
     text-align: center;
     border-radius: 10px;
-    width: 110px;
-    height: 69.3px;
+    width: 102px;
+    height: 64.26px;
     box-sizing: border-box;
     transition: all 1s;
     border: 0.4vh solid #36454F;
     transform: rotate(90deg);
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
 }
 .hexagon:hover{
     -webkit-transform: scale(1.1);
@@ -81,6 +84,9 @@
     height: 100%;
     width: 100%;
     z-index: -1;
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
 }
 
 /* Align them in such a way
@@ -98,7 +104,7 @@ that they form a hexagon */
 
 .heximg{
     filter: invert(85%) sepia(36%) saturate(311%) hue-rotate(343deg) brightness(102%) contrast(101%);
-    margin-top: -52px;
+    margin-top: -50px;
     margin-left: -16px;
     visibility: hidden;
     position: absolute;
@@ -119,7 +125,7 @@ that they form a hexagon */
 }
 .image{
     filter: invert(85%) sepia(36%) saturate(311%) hue-rotate(343deg) brightness(102%) contrast(101%);
-    margin-top: 15px;
+    margin-top: 18px;
     opacity: 0.0%;
     transition: all 1s;
     font-family: 'Roboto';

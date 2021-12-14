@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_897ff2d0160606ea98961935acb125d1ddbf4688(Module, $0) { var r = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (r instanceof DOMException) && (r.name === "SecurityError"); }
+export function __cargo_web_snippet_42ec134854d00f149db1e2e6026cd030d559fbab(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof PointerEvent && o.type === "gotpointercapture"); }

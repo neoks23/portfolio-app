@@ -55,6 +55,7 @@ impl Component for Home {
                 js! {
                     var audio = new Audio("../../../assets/UI_Quirky7.mp3");
                     audio.cloneNode().play();
+                    //location.href = "/me"
                     window.open("https://www.instagram.com/koensa1/", "_blank");
                 };
                 true
