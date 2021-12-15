@@ -42,9 +42,10 @@ impl Component for Me {
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Go to next slide"}</button>
                 </nav>
 
+                <img class="img-me" src="../../../assets/images/me2.png" alt=""/>
                 <div class="about-me">
-                  <h1>{"My First Bootstrap Page"}</h1>
-                  <p>{"This is some text."}</p>
+                  <h1>{"KOEN SAMPERS"}</h1><br/>
+                  <h3>{"Self-taught programmer and game designer through research & development."}</h3>
 
                 </div>
             </>
