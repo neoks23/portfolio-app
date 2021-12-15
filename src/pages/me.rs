@@ -32,23 +32,23 @@ impl Component for Me {
         let software = Callback::once(move |_| software_history.push(AppRoute::Software));
 
         html! {
-            <>
+            <div class="biggerscreen">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <Link<AppRoute> classes={"navbar-brand"} to={AppRoute::Index}>
-                        <img src="../../../assets/images/bootstrap.svg" width="30" height="30" class="d-inline-block align-top" alt="" />
+                        <img src="../../../assets/images/bootstrap.svg" width="30" height="30" class="d-inline-block align-top" alt="?" />
                         {" Bootstrap"}
                     </Link<AppRoute>>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Go Home"}</button>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Go to next slide"}</button>
                 </nav>
 
-                <img class="img-me" src="../../../assets/images/me2.png" alt=""/>
+                <img class="float-left img-me fixed-bottom" src="../../../assets/images/me2.png" alt="?"/>
                 <div class="about-me">
-                  <h1>{"KOEN SAMPERS"}</h1><br/>
-                  <h3>{"Self-taught programmer and game designer through research & development."}</h3>
+                  <h1 class="text-justify text-xl">{"KOEN SAMPERS"}</h1><br/>
+                  <h3 class="text-justify text-xl">{"Self-taught programmer and game designer through research & development."}</h3>
 
                 </div>
-            </>
+            </div>
         }
     }
 }
