@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_c33675864f3b1f40b02bde805b789d422237af4d(Module) { window.open("https://www.youtube.com/channel/UCoqfYvqcMCGoYMc8rNAXPBg","_blank"); }
+export function __cargo_web_snippet_5ee4450cef22796667135b1a0ecab3076b0642ff(Module) { location.href="/me"; }

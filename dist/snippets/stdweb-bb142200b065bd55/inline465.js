@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_e7b41217f3c0672b906012922193a6004a089f2e(Module, $0) { var r = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (r instanceof DOMException) && (r.name === "InvalidPointerId"); }
+export function __cargo_web_snippet_8b0ac64d8b8a426c146ed6160b8d9a31a27f15d0(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).host;})()); }

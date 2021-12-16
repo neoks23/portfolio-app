@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_8f09779db93b4697847b3e749a94a1f8aaba3eb7(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play(); }
+export function __cargo_web_snippet_c33675864f3b1f40b02bde805b789d422237af4d(Module) { window.open("https://www.youtube.com/channel/UCoqfYvqcMCGoYMc8rNAXPBg","_blank"); }
