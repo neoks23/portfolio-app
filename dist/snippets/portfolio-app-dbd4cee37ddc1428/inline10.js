@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_a31c2df99dbfbea6aa17e74c10de8ed6227299a8(Module) { location.href="/software"; }
+export function __cargo_web_snippet_b9759d3fa5ae6d67b8f5e700438e922317c8f818(Module) { window.open("https://github.com/neoks23/SuperBuzWorld","_blank"); }

@@ -100,12 +100,19 @@ that they form a hexagon */
 
 .about-me{
     margin-left: 25%;
-    margin-top: 350px;
+    margin-top: 250px;
     width: 50%;
     height: 300px;
-    color: #FFE5B3;
+    color: whitesmoke;
 }
 
+.repo-title{
+    color: whitesmoke;
+}
+.repo-btn:hover{
+    background-color: #36454F;
+    transition: all 1s;
+}
 
 @media screen and (min-width: 601px) {
     .about-me{
@@ -114,7 +121,7 @@ that they form a hexagon */
     .about-me > * {
         margin-left: 50%;
     }
-    .about-me > h1 {
+    .about-me > h1, .repo-title {
         letter-spacing: 20px;
     }
     .img-me {
@@ -128,7 +135,7 @@ that they form a hexagon */
     .about-me > * {
         margin-left: 0%;
     }
-    .about-me > h1 {
+    .about-me > h1, .repo-title {
         letter-spacing: 0px;
     }
 

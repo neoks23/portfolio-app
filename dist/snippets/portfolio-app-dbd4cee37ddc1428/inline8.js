@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_cf5a3f8a891386149753d13a467ab671499cfcfb(Module) { window.open("https://www.instagram.com/koensa1/","_blank"); }
+export function __cargo_web_snippet_f50cc248f06b326fdd4fb11b14df72deea771be8(Module) { window.open("https://github.com/neoks23/3DRainbowCubeVisualizer","_blank"); }

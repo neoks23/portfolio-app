@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_8f09779db93b4697847b3e749a94a1f8aaba3eb7(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play(); }
+export function __cargo_web_snippet_41d85b986b58a974640d51bf2fc956807ef1dd53(Module) { window.open("https://github.com/neoks23/BallPhysicsTest","_blank"); }

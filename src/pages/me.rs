@@ -38,8 +38,8 @@ impl Component for Me {
                         <img src="../../../assets/images/bootstrap.svg" width="30" height="30" class="d-inline-block align-top" alt="?" />
                         {" Bootstrap"}
                     </Link<AppRoute>>
-                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Go Home"}</button>
-                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Go to next slide"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Home"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Next slide"}</button>
                 </nav>
 
                 <img class="float-left img-me fixed-bottom" src="../../../assets/images/me2.png" alt="?"/>
