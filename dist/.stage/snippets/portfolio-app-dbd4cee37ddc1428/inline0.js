@@ -1,0 +1,1 @@
+export function __cargo_web_snippet_f50cc248f06b326fdd4fb11b14df72deea771be8(Module) { window.open("https://github.com/neoks23/3DRainbowCubeVisualizer","_blank"); }

@@ -1,0 +1,1 @@
+export function __cargo_web_snippet_d67ac6baeef6c51abf83b47906cb83107d4f2ee1(Module) { window.open("https://github.com/neoks23/php-CRUD","_blank"); }
