@@ -27,9 +27,9 @@ impl Component for Minigame {
 
         let history =  ctx.link().history().unwrap();
         let home_history = history.clone();
-        let contact_history = history.clone();
+        let software_history = history.clone();
         let home = Callback::once(move |_| home_history.push(AppRoute::Index));
-        let contact = Callback::once(move |_| contact_history.push(AppRoute::Contact));
+        let software = Callback::once(move |_| software_history.push(AppRoute::Software));
 
         html! {
             <div class="biggerscreen">
@@ -39,7 +39,7 @@ impl Component for Minigame {
                         {" Bootstrap"}
                     </Link<AppRoute>>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Home"}</button>
-                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {contact}>{"Contact"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Software"}</button>
                 </nav>
             </div>
         }

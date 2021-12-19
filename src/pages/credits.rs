@@ -27,9 +27,9 @@ impl Component for Credits {
 
         let history =  ctx.link().history().unwrap();
         let home_history = history.clone();
-        let me_history = history.clone();
+        let software_history = history.clone();
         let home = Callback::once(move |_| home_history.push(AppRoute::Index));
-        let me = Callback::once(move |_| me_history.push(AppRoute::Me));
+        let software = Callback::once(move |_| software_history.push(AppRoute::Software));
 
         html! {
             <div class="biggerscreen">
@@ -39,7 +39,7 @@ impl Component for Credits {
                         {" Bootstrap"}
                     </Link<AppRoute>>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Home"}</button>
-                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {me}>{"About me"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Software"}</button>
                 </nav>
             </div>
         }

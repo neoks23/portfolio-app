@@ -67,9 +67,9 @@ impl Component for Software {
     fn view(&self, ctx: &Context<Self>) -> Html {
         let history =  ctx.link().history().unwrap();
         let home_history = history.clone();
-        let gear_history = history.clone();
+        let me_history = history.clone();
         let home = Callback::once(move |_| home_history.push(AppRoute::Index));
-        let gear = Callback::once(move |_| gear_history.push(AppRoute::Gear));
+        let me = Callback::once(move |_| me_history.push(AppRoute::Me));
 
         html! {
             <>
@@ -79,7 +79,7 @@ impl Component for Software {
                         {" Bootstrap"}
                     </Link<AppRoute>>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Home"}</button>
-                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {gear}>{"Gear"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {me}>{"Previous slide"}</button>
                 </nav>
 
                 <br/><br/><br/>
