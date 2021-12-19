@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_31f6071b77215fa0db4e2754d20833403f06a364(Module, $0) { var r = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (r instanceof DOMException) && (r.name === "InvalidAccessError"); }
+export function __cargo_web_snippet_09a1006668a7b267661ed1b3bfe979f57186bad3(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Event && o.type === "selectionchange"); }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_59e66dfc06d97e127a6cf426a7294be14a5e5207(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).movementY;})()); }
+export function __cargo_web_snippet_c87bf941bc0ba1b0ab63f35626974b6a3586c2a5(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Event); }

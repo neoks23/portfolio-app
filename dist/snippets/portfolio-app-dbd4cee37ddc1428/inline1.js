@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_2e2f59c6ab7049089c8856a5dfac2853485187b5(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://discord.gg/nxvjnHrr","_blank"); }
+export function __cargo_web_snippet_a625bad725ad48c06e48e58d8809bb9ac3c2c2f8(Module) { window.open("https://github.com/neoks23/PaintApp","_blank"); }

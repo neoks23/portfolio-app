@@ -133,40 +133,48 @@ impl Component for Home {
         let history =  ctx.link().history().unwrap();
         let me_history = history.clone();
         let software_history = history.clone();
+        let gear_history = history.clone();
+        let minigame_history = history.clone();
+        let contact_history = history.clone();
+        let credits_history = history.clone();
+
         let me = Callback::once(move |_| me_history.push(AppRoute::Me));
         let software = Callback::once(move |_| software_history.push(AppRoute::Software));
-
+        let gear = Callback::once(move |_| gear_history.push(AppRoute::Gear));
+        let minigame = Callback::once(move |_| minigame_history.push(AppRoute::Minigame));
+        let contact = Callback::once(move |_| contact_history.push(AppRoute::Contact));
+        let credits = Callback::once(move |_| credits_history.push(AppRoute::Credits));
 
         html! {
             <>
                 <div class="centerdiv">
                     <div class="menubox">
                         <div class="hexagon normalHexSize hexpos1" onclick={if self.sm_visible { ctx.link().callback(|_| Msg::P1YT)} else {me}} >
-                            <p id="hextext1" class="noselect">{ "1"  }</p>
+                            <p id="hextext1" class="noselect">{ "About me"  }</p>
                             <img id="heximg1" src="../../../assets/images/youtube-64x64-3649993.png" alt="globe" width="32px" class="heximg" />
                         </div>
                         <div class="hexagon normalHexSize hexpos2" onclick={if self.sm_visible {ctx.link().callback(|_| Msg::P2SC)} else {software}}>
-                            <p id="hextext2" class="noselect">{ "2"  }</p>
+                            <p id="hextext2" class="noselect">{ "Software"  }</p>
                             <img id="heximg2" src="../../../assets/images/snapchat-64x64-3649983.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos3" onclick={ctx.link().callback(|_| Msg::P3IG)}>
-                            <p id="hextext3" class="noselect">{ "3" }</p>
+                        <div class="hexagon normalHexSize hexpos3" onclick={if self.sm_visible{ctx.link().callback(|_| Msg::P3IG)} else {gear}}>
+                            <p id="hextext3" class="noselect">{ "Gear" }</p>
                             <img id="heximg3" src="../../../assets/images/instagram-64x64-3649976.png" alt="globe" width="32px" class="heximg" />
                         </div>
                         <div class="hexagon normalHexSize hexpos4"  onclick={ctx.link().callback(|_| Msg::SMToggle)}>
                             <img src="../../../assets/images/dribbble-64x64-3649973.png" alt="globe" width="32px" class="image" />
                         </div>
 
-                        <div class="hexagon normalHexSize hexpos5" onclick={ctx.link().callback(|_| Msg::P4LI)}>
-                            <p id="hextext5" class="noselect">{ "5"  }</p>
+                        <div class="hexagon normalHexSize hexpos5" onclick={if self.sm_visible{ctx.link().callback(|_| Msg::P4LI)} else {minigame}}>
+                            <p id="hextext5" class="noselect">{ "Minigame"  }</p>
                             <img id="heximg5" src="../../../assets/images/linkedin-64x64-3649977.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos6" onclick={ctx.link().callback(|_| Msg::P5DISC)}>
-                            <p id="hextext6" class="noselect">{ "6"  }</p>
+                        <div class="hexagon normalHexSize hexpos6" onclick={if self.sm_visible{ctx.link().callback(|_| Msg::P5DISC)} else {contact}}>
+                            <p id="hextext6" class="noselect">{ "Contact"  }</p>
                             <img id="heximg6" src="../../../assets/images/discord-64x64-3649972.png" alt="globe" width="32px" class="heximg" />
                         </div>
-                        <div class="hexagon normalHexSize hexpos7" onclick={ctx.link().callback(|_| Msg::P6GIT)}>
-                            <p id="hextext7" class="noselect">{ "7" }</p>
+                        <div class="hexagon normalHexSize hexpos7" onclick={if self.sm_visible{ctx.link().callback(|_| Msg::P6GIT)} else {credits}}>
+                            <p id="hextext7" class="noselect">{ "Credits" }</p>
                             <img id="heximg7" src="../../../assets/images/github.png" alt="globe" width="32px" class="heximg" />
                         </div>
                     </div>

@@ -39,13 +39,13 @@ impl Component for Me {
                         {" Bootstrap"}
                     </Link<AppRoute>>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Home"}</button>
-                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Next slide"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Software"}</button>
                 </nav>
 
                 <img class="float-left img-me fixed-bottom" src="../../../assets/images/me2.png" alt="?"/>
                 <div class="about-me">
-                  <h1 class="text-justify text-xl">{"KOEN SAMPERS"}</h1><br/>
-                  <h3 class="text-justify text-xl">{"Self-taught programmer and game designer through research & development."}</h3>
+                    <h1 class="text-justify text-xl">{"KOEN SAMPERS"}</h1><br/>
+                    <h3 class="text-justify text-xl">{"Self-taught programmer and game designer through research & development."}</h3>
 
                 </div>
             </div>

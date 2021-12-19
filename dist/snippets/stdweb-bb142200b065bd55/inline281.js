@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_dc2fd915bd92f9e9c6a3bd15174f1414eee3dbaf(Module) { console.error( 'Encountered a panic!' ); }
+export function __cargo_web_snippet_9bbe9bb727fdb877bca2ca79d1022d392b22781a(Module, $0) { return Module.STDWEB_PRIVATE.acquire_rust_reference( new Float64Array( Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) ) ); }

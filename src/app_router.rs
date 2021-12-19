@@ -13,6 +13,14 @@ pub enum AppRoute {
     Me,
     #[at("/software")]
     Software,
+    #[at("/gear")]
+    Gear,
+    #[at("/minigame")]
+    Minigame,
+    #[at("/contact")]
+    Contact,
+    #[at("/credits")]
+    Credits,
     #[at("/")]
     Index,
 }
@@ -21,6 +29,10 @@ pub fn switch_main(route: &AppRoute) -> Html{
     match route.clone() {
         AppRoute::Me => html!{ <pages::Me/> },
         AppRoute::Software => html! { <pages::Software/> },
+        AppRoute::Gear => html! { <pages::Gear/> },
+        AppRoute::Minigame => html! { <pages::Minigame/> },
+        AppRoute::Contact => html! { <pages::Contact/> },
+        AppRoute::Credits => html! { <pages::Credits/> },
         AppRoute::Index => html! { <pages::Home/> },
     }
 }
