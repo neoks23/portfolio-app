@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_41d85b986b58a974640d51bf2fc956807ef1dd53(Module) { window.open("https://github.com/neoks23/BallPhysicsTest","_blank"); }
+export function __cargo_web_snippet_1d08625da0822b42b533903f0c034c4ed935e5ec(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/johnxina.png"; }

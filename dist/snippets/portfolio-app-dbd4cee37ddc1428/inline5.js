@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_62ba98747f9c2ba20b31b35a4cb3e85e7febd1b6(Module) { window.open("https://github.com/neoks23/rustinvaders","_blank"); }
+export function __cargo_web_snippet_9f1bee6f5186fd188b51e8a9eee6bb3815587706(Module) { document.getElementById("shop-items").style.visibility="hidden"; }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_a625bad725ad48c06e48e58d8809bb9ac3c2c2f8(Module) { window.open("https://github.com/neoks23/PaintApp","_blank"); }
+export function __cargo_web_snippet_9983a55415fa9f55a62367a10f747551caff8c85(Module) { var audio=new Audio("../../../assets/dingsfx.mp3");audio.cloneNode().play(); }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_a230002551a5ee6325a80144144e81d4886ac6ac(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://github.com/neoks23","_blank"); }
+export function __cargo_web_snippet_e853589303cd697aa56165d991517b3a3c0b5cf7(Module) { document.getElementById("shop-items").style.visibility="visible"; }

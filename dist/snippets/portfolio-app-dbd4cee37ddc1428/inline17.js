@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_36a43b0918c86173e2053ff2c4da48c9fe2017b1(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/eggman.png"; }
+export function __cargo_web_snippet_a625bad725ad48c06e48e58d8809bb9ac3c2c2f8(Module) { window.open("https://github.com/neoks23/PaintApp","_blank"); }

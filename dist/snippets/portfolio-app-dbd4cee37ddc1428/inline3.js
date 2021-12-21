@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_d67ac6baeef6c51abf83b47906cb83107d4f2ee1(Module) { window.open("https://github.com/neoks23/php-CRUD","_blank"); }
+export function __cargo_web_snippet_36a43b0918c86173e2053ff2c4da48c9fe2017b1(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/eggman.png"; }

@@ -192,7 +192,7 @@ impl Component for Minigame {
                     </div>
                 </div>
                 <img id="socialcredit" class="toheaven selectDisable" src="../../../assets/images/minigame/socialcredit.jpg" style="position:absolute; top:100px; left:100px; width:200px"/>
-                <img id="clicker" class="mx-auto d-block fixed-bottom selectDisable" src="../../../assets/images/minigame/johnxina.png" alt="?" height="600px" width="1000px" onclick = {ctx.link().callback(|_| Msg::Click)}/>
+                <img id="clicker" class="mx-auto d-block fixed-bottom selectDisable" src="../../../assets/images/minigame/johnxina.png" alt="?" height="400px" width="800px" onclick = {ctx.link().callback(|_| Msg::Click)}/>
             </div>
         }
     }

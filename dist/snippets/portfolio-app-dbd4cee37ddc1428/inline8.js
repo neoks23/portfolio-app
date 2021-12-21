@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_83015c1e57aa6b41f7f5ad37029c001ad4599ef4(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://www.linkedin.com/in/koen-sampers-8345741a5/","_blank"); }
+export function __cargo_web_snippet_a230002551a5ee6325a80144144e81d4886ac6ac(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://github.com/neoks23","_blank"); }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_0a02c7764aacc2ed939a149ae98000223d3eebe8(Module, $0) { var r = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (r instanceof DOMException) && (r.name === "InvalidStateError"); }
+export function __cargo_web_snippet_bc884dc9e84569dafebcfc7fcf757479cd7d5820(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Event && o.type === "pointerlockerror"); }

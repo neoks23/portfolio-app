@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_9983a55415fa9f55a62367a10f747551caff8c85(Module) { var audio=new Audio("../../../assets/dingsfx.mp3");audio.cloneNode().play(); }
+export function __cargo_web_snippet_0cdad3c948ce131f15bd32bb5d601ef1dc2ffa7f(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://www.youtube.com/channel/UCoqfYvqcMCGoYMc8rNAXPBg","_blank"); }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_b9759d3fa5ae6d67b8f5e700438e922317c8f818(Module) { window.open("https://github.com/neoks23/SuperBuzWorld","_blank"); }
+export function __cargo_web_snippet_8d3e19a47a694acf0e6fa6cf704bb3bb434f34ef(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/xijinping.png"; }
