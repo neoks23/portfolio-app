@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_eb4e0ee799f7a2bd84efd98835189f4474ead247(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof TypeError); }
+export function __cargo_web_snippet_9452aaa9fa11f111ed7589fee9a7e9ace57987c7(Module, $0, $1, $2, $3) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);$2 = Module.STDWEB_PRIVATE.to_js($2);$3 = Module.STDWEB_PRIVATE.to_js($3);($0).toBlob(($1),($2),($3)); }

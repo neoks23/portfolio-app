@@ -119,6 +119,28 @@ that they form a hexagon */
   color: whitesmoke;
 }
 
+.gear {
+  margin-top: 17%;
+  width: 50%;
+  height: 300px;
+  color: whitesmoke;
+}
+
+.gear > table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+  display: block;
+}
+
 .repo-title {
   color: whitesmoke;
 }
@@ -141,6 +163,14 @@ that they form a hexagon */
     margin-left: 50%;
   }
 
+  .gear {
+    margin-left: 33.33%;
+  }
+
+  .gear > table > tr > th > h3, .gear > table > tr > td > ul > li {
+    text-align: left;
+  }
+
   .about-me > h1, .repo-title {
     letter-spacing: 20px;
   }
@@ -160,6 +190,14 @@ that they form a hexagon */
 
   .about-me > h1, .repo-title {
     letter-spacing: 10px;
+  }
+
+  .gear {
+    margin-left: 17%;
+  }
+
+  .gear > table > tr > th > h3, .gear > table > tr > td > ul > li {
+    text-align: center;
   }
 
   .img-me {

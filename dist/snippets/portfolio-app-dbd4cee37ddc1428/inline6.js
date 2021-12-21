@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_a230002551a5ee6325a80144144e81d4886ac6ac(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://github.com/neoks23","_blank"); }
+export function __cargo_web_snippet_9f5b745f08d25fd3be22a5f88a2b759ee41a6428(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://www.snapchat.com/add/koensa1","_blank"); }

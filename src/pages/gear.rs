@@ -41,6 +41,32 @@ impl Component for Gear {
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Home"}</button>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Software"}</button>
                 </nav>
+
+
+                <div class="gear">
+                    <table>
+                        <tr>
+                            <th><h3>{"Software"}</h3></th>
+                            <th><h3>{"Hardware"}</h3></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                  <li><h5>{"Coffee"}</h5></li>
+                                  <li><h5>{"Tea"}</h5></li>
+                                  <li><h5>{"Milk"}</h5></li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                  <li><h5>{"Coffee"}</h5></li>
+                                  <li><h5>{"Tea"}</h5></li>
+                                  <li><h5>{"Milk"}</h5></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         }
     }

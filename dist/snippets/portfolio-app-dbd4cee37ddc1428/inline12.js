@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_9f5b745f08d25fd3be22a5f88a2b759ee41a6428(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://www.snapchat.com/add/koensa1","_blank"); }
+export function __cargo_web_snippet_41d85b986b58a974640d51bf2fc956807ef1dd53(Module) { window.open("https://github.com/neoks23/BallPhysicsTest","_blank"); }

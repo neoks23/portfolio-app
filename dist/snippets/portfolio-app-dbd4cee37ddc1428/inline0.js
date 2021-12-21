@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_f50cc248f06b326fdd4fb11b14df72deea771be8(Module) { window.open("https://github.com/neoks23/3DRainbowCubeVisualizer","_blank"); }
+export function __cargo_web_snippet_a230002551a5ee6325a80144144e81d4886ac6ac(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://github.com/neoks23","_blank"); }

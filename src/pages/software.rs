@@ -85,7 +85,7 @@ impl Component for Software {
                 <br/><br/><br/>
                 <h1 class="text-justify text-xl repo-title">{"Software repository"}</h1>
                 <br/>
-                <table class="table table-dark repo-table">
+                <table class="table table-dark repo-table" cellspacing="0" width="100%">
                     <thead>
                         <tr>
                             <th scope="col">{"Title"}</th>

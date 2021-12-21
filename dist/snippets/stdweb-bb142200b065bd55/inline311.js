@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_aa5f82b91baa16d8f7102b6cc54005b8841bcd45(Module, $0) { return (Module.STDWEB_PRIVATE.acquire_js_reference( $0 ) instanceof Int8Array) | 0; }
+export function __cargo_web_snippet_d857323550eecbf9d9eb04a58697a689cd1c4ba7(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof WebSocket); }
