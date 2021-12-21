@@ -73,7 +73,7 @@ impl Component for Minigame {
                     }
                         }
                         else{
-                            js!{
+                    js!{
                         var audio = document.getElementById("redsunintheskys");
                         audio.pause();
                     }
