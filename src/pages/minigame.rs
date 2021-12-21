@@ -1,5 +1,6 @@
 use yew::prelude::*;
 use stdweb::*;
+use std::string;
 use crate::app_router::{AppRoute};
 use yew_router::prelude::*;
 
@@ -21,6 +22,7 @@ pub struct Minigame {
     toggle_shop: bool,
     egg_man: i64,
     xi_jin_ping: i64,
+    log_msg: &'static str,
 }
 
 impl Component for Minigame {
@@ -35,6 +37,7 @@ impl Component for Minigame {
             toggle_shop: true,
             egg_man: 2500,
             xi_jin_ping: 10000,
+            log_msg: "",
         }
     }
 
@@ -63,6 +66,7 @@ impl Component for Minigame {
             },
             Msg::ZhongXina =>{
                 self.social_credit = 15;
+                self.log_msg = "Selected zhong xina (+15 SC)";
                 js!{
                     var clicker = document.getElementById("clicker");
                     clicker.src = "../../../assets/images/minigame/johnxina.png";
@@ -78,6 +82,16 @@ impl Component for Minigame {
                         var clicker = document.getElementById("clicker");
                         clicker.src = "../../../assets/images/minigame/eggman.png";
                     }
+                    if self.egg_man == 0{
+                        self.log_msg = "Selected eggman (+50 SC)";
+                    }
+                    else{
+                        self.log_msg = "Purchased eggman (+50 SC)";
+                        self.egg_man = 0;
+                    }
+                }
+                else{
+                    self.log_msg = "Not enough social credit to purchase egg man";
                 }
                 return true;
             },
@@ -90,6 +104,16 @@ impl Component for Minigame {
                         var clicker = document.getElementById("clicker");
                         clicker.src = "../../../assets/images/minigame/xijinping.png";
                     }
+                    if self.xi_jin_ping == 0{
+                        self.log_msg = "Selected xi jin ping (+100 SC)";
+                    }
+                    else{
+                        self.log_msg = "Purchased xi jin ping (+100 SC)";
+                        self.xi_jin_ping = 0;
+                    }
+                }
+                else{
+                    self.log_msg = "Not enough social credit to purchase xi jin ping";
                 }
                 return true;
             }
@@ -164,6 +188,7 @@ impl Component for Minigame {
                         <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::XiJinPing)}>{"Xi jin ping 10000 SC"}</button><br/>
                         <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable">{"Contact"}</button><br/>
                         <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable">{"Contact"}</button><br/>
+                        <h6 class="selectDisable">{self.log_msg}</h6>
                     </div>
                 </div>
                 <img id="socialcredit" class="toheaven selectDisable" src="../../../assets/images/minigame/socialcredit.jpg" style="position:absolute; top:100px; left:100px; width:200px"/>

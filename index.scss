@@ -138,6 +138,13 @@ that they form a hexagon */
     transition: all 0.2s;
 }
 
+#shop{
+    color: whitesmoke;
+}
+#shop > h6 {
+    margin-left: 13px;
+}
+
 #socialcredit{
     z-index: 1031;
     opacity: 0;
