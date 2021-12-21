@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_eb4e0ee799f7a2bd84efd98835189f4474ead247(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof TypeError); }
+export function __cargo_web_snippet_39460f92980f3787799d4ef4922d5e6aa6c3eab6(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Document); }
