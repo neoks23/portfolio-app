@@ -27,9 +27,9 @@ impl Component for Gear {
 
         let history =  ctx.link().history().unwrap();
         let home_history = history.clone();
-        let software_history = history.clone();
+        let minigame_history = history.clone();
         let home = Callback::once(move |_| home_history.push(AppRoute::Index));
-        let software = Callback::once(move |_| software_history.push(AppRoute::Software));
+        let minigame = Callback::once(move |_| minigame_history.push(AppRoute::Minigame));
 
         html! {
             <div class="biggerscreen">
@@ -39,7 +39,7 @@ impl Component for Gear {
                         {" Bootstrap"}
                     </Link<AppRoute>>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Home"}</button>
-                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {software}>{"Software"}</button>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {minigame}>{"Minigame"}</button>
                 </nav>
 
 
