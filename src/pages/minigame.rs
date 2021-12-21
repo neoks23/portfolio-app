@@ -71,8 +71,7 @@ impl Component for Minigame {
                         audio.loop = true;
                         audio.play();
                     }
-                        }
-                        else{
+                } else {
                     js!{
                         var audio = document.getElementById("redsunintheskys");
                         audio.pause();
