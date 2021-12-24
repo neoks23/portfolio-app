@@ -1,1 +1,0 @@
-export function __cargo_web_snippet_eb95dc55e586240eb386b6291f2bdb178425acff(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/thewok.png"; }

@@ -1,1 +1,0 @@
-export function __cargo_web_snippet_8d3e19a47a694acf0e6fa6cf704bb3bb434f34ef(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/xijinping.png"; }
