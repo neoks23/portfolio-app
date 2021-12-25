@@ -148,6 +148,16 @@ that they form a hexagon */
     transition: all 0.2s;
 }
 
+.contact-form{
+    width: 50%;
+    margin-left: 25%;
+    height: 600px;
+}
+
+textarea {
+    resize: none;
+}
+
 #shop{
     color: whitesmoke;
 }
