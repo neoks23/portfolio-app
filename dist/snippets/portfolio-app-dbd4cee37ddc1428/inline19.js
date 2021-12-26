@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_36a43b0918c86173e2053ff2c4da48c9fe2017b1(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/eggman.png"; }
+export function __cargo_web_snippet_e873d7259824ee2415e78d10e1bfb37f0116a486(Module) { var audio=document.getElementById("redsunintheskys");audio.loop=true;audio.play(); }
