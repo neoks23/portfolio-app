@@ -7,7 +7,7 @@ use crate::app_router::{AppRoute};
 use yew_router::prelude::*;
 use wasm_bindgen::JsCast;
 
-//SENDGRID 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
+
 
 pub enum Msg{
     NameChanged,
