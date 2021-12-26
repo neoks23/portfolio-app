@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_9983a55415fa9f55a62367a10f747551caff8c85(Module) { var audio=new Audio("../../../assets/dingsfx.mp3");audio.cloneNode().play(); }
+export function __cargo_web_snippet_c5b156f89d88121d64e7739a1877ec47db3ea0ea(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/superidol.png"; }

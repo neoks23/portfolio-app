@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_eb95dc55e586240eb386b6291f2bdb178425acff(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/thewok.png"; }
+export function __cargo_web_snippet_1d08625da0822b42b533903f0c034c4ed935e5ec(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/johnxina.png"; }

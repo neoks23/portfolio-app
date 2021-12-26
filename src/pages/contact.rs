@@ -7,11 +7,14 @@ use crate::app_router::{AppRoute};
 use yew_router::prelude::*;
 use wasm_bindgen::JsCast;
 
+//SENDGRID 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
+
 pub enum Msg{
     NameChanged,
     EmailChanged,
     SubjectChanged,
     MessageChanged,
+    SubmitForm,
 }
 
 pub struct Contact {
@@ -25,6 +28,7 @@ pub struct Contact {
     email: String,
     subject: String,
     message: String,
+    out: String,
 }
 
 impl Component for Contact {
@@ -41,6 +45,7 @@ impl Component for Contact {
             email: "".to_string(),
             subject: "".to_string(),
             message: "".to_string(),
+            out: "".to_string(),
         }
     }
 
@@ -90,8 +95,33 @@ impl Component for Contact {
                 } else {
                     return false;
                 }
-            }
+            },
+            Msg::SubmitForm =>{
+                self.out = "houbabla".to_string();
 
+                /*
+                let email = Message::builder()
+                    .from(format!("{} <{}>",self.name, self.email).parse().unwrap())
+                    .to("Koen Sampers <neoks23@gmail.com>".parse().unwrap())
+                    .subject(self.subject)
+                    .body(self.message)
+                    .unwrap();
+
+                let creds = Credentials::new("smtp_username".to_string(), "smtp_password".to_string());
+
+                // Open a remote connection to gmail
+                let mailer = SmtpTransport::relay("smtp.gmail.com")
+                    .unwrap()
+                    .credentials(creds)
+                    .build();
+
+                // Send the email
+                match mailer.send(&email) {
+                    Ok(_) => self.out = "Email sent successfully!".to_string(),
+                    Err(e) => self.out = format!("Could not send email: {:?}", e),
+                }*/
+                return true;
+            }
         }
     }
 
@@ -107,16 +137,6 @@ impl Component for Contact {
         let email_onchange = ctx.link().callback(|_| Msg::EmailChanged);
         let subject_onchange = ctx.link().callback(|_| Msg::SubjectChanged);
         let message_onchange = ctx.link().callback(|_| Msg::MessageChanged);
-
-        /*
-        let onsubmit = ctx.link().callback(move |ev: FocusEvent| {
-            let target = ev.target();
-
-            let input = target.and_then(|t| t.dyn_into::<HtmlInputElement>().ok());
-
-            input.map(|input| Msg::UpdateName(input.value()))
-
-        });*/
 
         html! {
             <div class="biggerscreen">
@@ -134,9 +154,10 @@ impl Component for Contact {
                     {format!("Email: {}", self.email.clone())}<br/>
                     {format!("Subject: {}", self.subject.clone())}<br/>
                     {format!("Message: {}", self.message.clone())}<br/>
+                    {format!("Out: {}", self.out.clone())}<br/>
                 </h1>
 
-                <form class="contact-form">
+                <div class="contact-form">
                     <label for="name">{"Name"}</label>
                     <input ref={self.name_input.clone()} onchange={name_onchange} class="form-control" type="text" id="name" name="name" placeholder="Your name..." />
                     <label for="email">{"Email address"}</label>
@@ -145,7 +166,8 @@ impl Component for Contact {
                     <input ref={self.subject_input.clone()} onchange={subject_onchange} type="text" class="form-control" id="subject" placeholder="Enter subject" />
                     <label for="message">{"Subject"}</label>
                     <textarea ref={self.message_input.clone()} onchange={message_onchange} class="form-control" id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
-                </form>
+                    <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::SubmitForm)}>{"Submit"}</button>
+                </div>
             </div>
         }
     }

@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_f5862664124493d42265c5adc12fa53cefa6b2ca(Module, $0, $1) { $0 = Module.STDWEB_PRIVATE.to_js($0);$1 = Module.STDWEB_PRIVATE.to_js($1);($0).cancelBubble=($1); }
+export function __cargo_web_snippet_ff987f4528f4cf27f9e0a010c9fa1de716a5de16(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof Event && o.type === "slotchange"); }

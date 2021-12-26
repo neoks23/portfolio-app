@@ -1,1 +1,0 @@
-export function __cargo_web_snippet_e853589303cd697aa56165d991517b3a3c0b5cf7(Module) { document.getElementById("shop-items").style.visibility="visible"; }

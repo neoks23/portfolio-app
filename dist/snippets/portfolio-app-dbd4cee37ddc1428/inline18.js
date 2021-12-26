@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_e873d7259824ee2415e78d10e1bfb37f0116a486(Module) { var audio=document.getElementById("redsunintheskys");audio.loop=true;audio.play(); }
+export function __cargo_web_snippet_a230002551a5ee6325a80144144e81d4886ac6ac(Module) { var audio=new Audio("../../../assets/UI_Quirky7.mp3");audio.cloneNode().play();window.open("https://github.com/neoks23","_blank"); }

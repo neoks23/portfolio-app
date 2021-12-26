@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_1d08625da0822b42b533903f0c034c4ed935e5ec(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/johnxina.png"; }
+export function __cargo_web_snippet_e853589303cd697aa56165d991517b3a3c0b5cf7(Module) { document.getElementById("shop-items").style.visibility="visible"; }

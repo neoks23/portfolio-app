@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_b538449e9abbe26fd385452ed1acf6b55ecb0503(Module, $0, $1) { $1 = Module.STDWEB_PRIVATE.to_js($1);Module.STDWEB_PRIVATE.from_js($0, (function(){return($1).deltaZ;})()); }
+export function __cargo_web_snippet_22a62bc03ed4b2e530885eaee9c575a53d7a722d(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof MouseEvent && o.type === "mouseleave"); }

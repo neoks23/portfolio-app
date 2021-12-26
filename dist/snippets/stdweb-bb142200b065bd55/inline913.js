@@ -1,1 +1,1 @@
-export function __cargo_web_snippet_b6bdbc5ea620c57d3dbc5af2d2f7357276748675(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof MutationObserver); }
+export function __cargo_web_snippet_ca516838206a1a6909a08b0e73f7d59b13cb0b40(Module, $0) { var o = Module.STDWEB_PRIVATE.acquire_js_reference( $0 );return (o instanceof NodeList); }

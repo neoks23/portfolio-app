@@ -1,1 +1,0 @@
-export function __cargo_web_snippet_c5b156f89d88121d64e7739a1877ec47db3ea0ea(Module) { var clicker=document.getElementById("clicker");clicker.src="../../../assets/images/minigame/superidol.png"; }
