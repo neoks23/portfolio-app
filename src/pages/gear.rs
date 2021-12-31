@@ -41,31 +41,18 @@ impl Component for Gear {
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {home}>{"Home"}</button>
                     <button class="btn btn-primary btn-rounded btn-sm nav-button" onclick = {minigame}>{"Minigame"}</button>
                 </nav>
-
-
                 <div class="gear">
-                    <table>
-                        <tr>
-                            <th><h3>{"Software"}</h3></th>
-                            <th><h3>{"Hardware"}</h3></th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <ul>
-                                  <li><h5>{"Coffee"}</h5></li>
-                                  <li><h5>{"Tea"}</h5></li>
-                                  <li><h5>{"Milk"}</h5></li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                  <li><h5>{"Coffee"}</h5></li>
-                                  <li><h5>{"Tea"}</h5></li>
-                                  <li><h5>{"Milk"}</h5></li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
+                    <ul>
+                        <h3>{"Software"}</h3><br/>
+                        <li><h4>{"Photoshop CS6"}</h4></li>
+                        <li><h4>{"Jetbrains Student license"}</h4></li><br/><br/>
+                        <h3>{"Hardware"}</h3><br/>
+                        <li><h4>{"Laptop(Lenovo Ideapad 330)"}</h4></li>
+                        <li><h4>{"Keyboard(Dierya DK61E)"}</h4></li>
+                        <li><h4>{"Monitor(iiyama Black Hawk G2740HSU)"}</h4></li>
+                        <li><h4>{"GPU(MSI Radeon RX 580 ARMOR 8G OC)"}</h4></li>
+                        <li><h4>{"CPU(AMD Ryzen 5 2400G Boxed)"}</h4></li>
+                    </ul>
                 </div>
             </div>
         }
