@@ -149,8 +149,12 @@ that they form a hexagon */
 .contact-form{
     width: 50%;
     color: whitesmoke;
+    margin-top: 200px;
     margin-left: 25%;
     height: 600px;
+}
+.contact-form > button {
+    margin-top: 20px;
 }
 
 textarea {

@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "grunt-contrib-copy": "^1.0.0"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.6.0"
   }
 }
