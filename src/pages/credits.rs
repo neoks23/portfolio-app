@@ -53,26 +53,26 @@ impl Component for Credits {
                     </div>
                     <div>
                         <a href="https://www.rust-lang.org/" >
-                            <img src="../../../assets/images/credits/rust_logo.png" width="100" height="100" class="credits-v"/>
+                            <img src="../../../assets/images/credits/rustlogo.png" width="100" height="100" class="credits-v"/>
                         </a>
                         <h3 class="text-xl">{"Rust"}</h3>
                     </div>
                     <div>
                         <a href="https://www.javascript.com/">
-                            <img src="../../../assets/images/credits/javascript_logo.png" width="100" height="100" class="credits-v"/>
+                            <img src="../../../assets/images/credits/javascript-logo.png" width="100" height="100" class="credits-v"/>
                         </a>
                         <h3 class="text-xl">{"Javascript"}</h3>
                     </div>
 
                     <div>
                         <a href="https://yew.rs/">
-                            <img src="../../../assets/images/credits/yew_logo.png" width="100" height="100" class="credits-v"/>
+                            <img src="../../../assets/images/credits/yew-logo.png" width="100" height="100" class="credits-v"/>
                         </a>
                         <h3 class="text-xl">{"Yew"}</h3>
                     </div>
                     <div>
                         <a href="https://webassembly.org/">
-                            <img src="../../../assets/images/credits/webassembly_logo.png" width="100" height="100" class="credits-v" />
+                            <img src="../../../assets/images/credits/webassembly-logo.png" width="100" height="100" class="credits-v" />
                         </a>
                         <h3 class="text-xl">{"Webassembly"}</h3>
                     </div>
