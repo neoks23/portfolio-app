@@ -133,19 +133,6 @@ that they form a hexagon */
     display: block;
 }
 
-
-.repo-title{
-    color: whitesmoke;
-}
-.repo-btn{
-    transition: all 0.2s;
-}
-
-.repo-btn:hover{
-    background-color: #36454F;
-    transition: all 0.2s;
-}
-
 .contact-form{
     width: 50%;
     color: whitesmoke;
@@ -279,6 +266,19 @@ textarea {
     */
     -ms-user-select: none;
     user-select: none;
+}
+.software{
+    width: 50%;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 200px;
+    margin-left: 25%;
+    height: 600px;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
 }
 .image{
     filter: invert(85%) sepia(36%) saturate(311%) hue-rotate(343deg) brightness(102%) contrast(101%);
