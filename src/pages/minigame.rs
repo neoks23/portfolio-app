@@ -9,26 +9,26 @@ pub enum Msg{
     ToggleMusic,
     ToggleSfx,
     ToggleShop,
-    ZhongXina,
-    EggMan,
-    XiJinPing,
-    SuperIdol,
-    TheWok,
+    PlainCookies,
+    SugarCookies,
+    PeanutButterCookies,
+    Oreos,
+    ReesesPuffs,
 }
 
 pub struct Minigame {
     // `ComponentLink` is like a reference to a component.
     // It can be used to send messages to the component
     value: i64,
-    social_credit: i64,
+    cookies: i64,
     start_music: bool,
     toggle_music: bool,
     toggle_sfx: bool,
     toggle_shop: bool,
-    egg_man: i64,
-    the_wok: i64,
-    super_idol: i64,
-    xi_jin_ping: i64,
+    sugar_cookies: i64,
+    peanut_butter_cookies: i64,
+    oreos: i64,
+    reeses_puffs: i64,
     log_msg: &'static str,
 }
 
@@ -39,15 +39,15 @@ impl Component for Minigame {
     fn create(_ctx: &Context<Self>) -> Self {
         Self {
             value: 0,
-            social_credit: 15,
+            cookies: 15,
             start_music: true,
             toggle_music: true,
             toggle_sfx: true,
             toggle_shop: true,
-            egg_man: 2500,
-            the_wok: 10000,
-            super_idol: 50000,
-            xi_jin_ping: 120000,
+            sugar_cookies: 2500,
+            peanut_butter_cookies: 10000,
+            oreos: 50000,
+            reeses_puffs: 120000,
             log_msg: "",
         }
     }
@@ -55,7 +55,7 @@ impl Component for Minigame {
     fn update(&mut self, _ctx: &Context<Self>, msg: Self::Message) -> bool {
         if self.start_music{
             js!{
-                var audio = document.getElementById("redsunintheskys");
+                var audio = document.getElementById("monke");
                 audio.loop = true;
                 audio.play();
             }
@@ -67,13 +67,13 @@ impl Component for Minigame {
                 self.toggle_music = !self.toggle_music;
                 if self.toggle_music{
                     js!{
-                        var audio = document.getElementById("redsunintheskys");
+                        var audio = document.getElementById("monke");
                         audio.loop = true;
                         audio.play();
                     }
                 } else {
                     js!{
-                        var audio = document.getElementById("redsunintheskys");
+                        var audio = document.getElementById("monke");
                         audio.pause();
                     }
                 }
@@ -95,107 +95,107 @@ impl Component for Minigame {
                     }
                 }
             },
-            Msg::ZhongXina =>{
-                self.social_credit = 15;
-                self.log_msg = "Selected zhong xina (+15 SC)";
+            Msg::PlainCookies =>{
+                self.cookies = 15;
+                self.log_msg = "Selected plain cookies +15";
                 js!{
                     var clicker = document.getElementById("clicker");
-                    clicker.src = "../../../assets/images/minigame/johnxina.png";
+                    clicker.src = "../../../assets/images/cookieclicker/cookie.png";
                 }
                 return true;
             }
-            Msg::EggMan => {
+            Msg::SugarCookies => {
 
-                if self.value > self.egg_man {
-                    self.value = self.value - self.egg_man;
-                    self.social_credit = 50;
+                if self.value > self.sugar_cookies {
+                    self.value = self.value - self.sugar_cookies;
+                    self.cookies = 50;
                     js!{
                         var clicker = document.getElementById("clicker");
-                        clicker.src = "../../../assets/images/minigame/eggman.png";
+                        clicker.src = "../../../assets/images/cookieclicker/sugar-cookie.png";
                     }
-                    if self.egg_man == 0{
-                        self.log_msg = "Selected eggman (+50 SC)";
+                    if self.sugar_cookies == 0{
+                        self.log_msg = "Selected sugar cookies +50";
                     }
                     else{
-                        self.log_msg = "Purchased eggman (+50 SC)";
-                        self.egg_man = 0;
+                        self.log_msg = "Purchased sugar cookies +50";
+                        self.sugar_cookies = 0;
                     }
                 }
                 else{
-                    self.log_msg = "Not enough social credit to purchase egg man";
+                    self.log_msg = "Not enough cookies to purchase sugar cookies";
                 }
                 return true;
             },
-            Msg::TheWok => {
-                if self.value > self.the_wok {
-                    self.value = self.value - self.the_wok;
-                    self.social_credit = 100;
+            Msg::PeanutButterCookies => {
+                if self.value > self.peanut_butter_cookies {
+                    self.value = self.value - self.peanut_butter_cookies;
+                    self.cookies = 100;
                     js!{
                         var clicker = document.getElementById("clicker");
-                        clicker.src = "../../../assets/images/minigame/thewok.png";
+                        clicker.src = "../../../assets/images/cookieclicker/peanutbuttercookie'.png";
                     }
-                    if self.the_wok == 0{
-                        self.log_msg = "Selected the wok (+100 SC)";
+                    if self.peanut_butter_cookies == 0{
+                        self.log_msg = "Selected peanut butter cookies +100";
                     }
                     else{
-                        self.log_msg = "Purchased the wok (+100 SC)";
-                        self.the_wok = 0;
+                        self.log_msg = "Purchased peanut butter cookies +100";
+                        self.peanut_butter_cookies = 0;
                     }
                 }
                 else{
-                    self.log_msg = "Not enough social credit to purchase the wok";
+                    self.log_msg = "Not enough cookies to purchase peanut butter cookies";
                 }
                 return true;
             }
-            Msg::SuperIdol => {
-                if self.value > self.super_idol {
-                    self.value = self.value - self.super_idol;
-                    self.social_credit = 200;
+            Msg::Oreos => {
+                if self.value > self.oreos {
+                    self.value = self.value - self.oreos;
+                    self.cookies = 200;
                     js!{
                         var clicker = document.getElementById("clicker");
-                        clicker.src = "../../../assets/images/minigame/superidol.png";
+                        clicker.src = "../../../assets/images/cookieclicker/oreo.png";
                     }
-                    if self.super_idol == 0{
-                        self.log_msg = "Selected super idol (+200 SC)";
+                    if self.oreos == 0{
+                        self.log_msg = "Selected oreos +200";
                     }
                     else{
-                        self.log_msg = "Purchased super idol (+200 SC)";
-                        self.super_idol = 0;
+                        self.log_msg = "Purchased oreos +200";
+                        self.oreos = 0;
                     }
                 }
                 else{
-                    self.log_msg = "Not enough social credit to purchase super idol";
+                    self.log_msg = "Not enough cookies to purchase oreos";
                 }
                 return true;
             }
-            Msg::XiJinPing => {
+            Msg::ReesesPuffs => {
 
-                if self.value > self.xi_jin_ping {
-                    self.value = self.value - self.xi_jin_ping;
-                    self.social_credit = 30000000;
+                if self.value > self.reeses_puffs {
+                    self.value = self.value - self.reeses_puffs;
+                    self.cookies = 500;
                     js!{
                         var clicker = document.getElementById("clicker");
-                        clicker.src = "../../../assets/images/minigame/xijinping.png";
+                        clicker.src = "../../../assets/images/cookieclicker/reesespuffs.png";
                     }
-                    if self.xi_jin_ping == 0{
-                        self.log_msg = "Selected xi jin ping (+30000000 SC)";
+                    if self.reeses_puffs == 0{
+                        self.log_msg = "Selected reeses puffs +500";
                     }
                     else{
-                        self.log_msg = "Purchased xi jin ping (+30000000 SC)";
-                        self.xi_jin_ping = 0;
+                        self.log_msg = "Purchased reeses puffs +500";
+                        self.reeses_puffs = 0;
                     }
                 }
                 else{
-                    self.log_msg = "Not enough social credit to purchase xi jin ping";
+                    self.log_msg = "Not enough cookies to purchase reeses puffs";
                 }
                 return true;
             }
             Msg::Click => {
-                self.value = self.value + self.social_credit;
+                self.value = self.value + self.cookies;
 
                 if self.toggle_sfx{
                     js!{
-                        var audio = new Audio("../../../assets/dingsfx.mp3");
+                        var audio = new Audio("../../../assets/pop.mp3");
                         audio.cloneNode().play();
                     }
                 }
@@ -205,10 +205,10 @@ impl Component for Minigame {
                         return Math.floor(Math.random() * (max - min) ) + min;
                     }
 
-                    var socialcredit = document.getElementById("socialcredit");
+                    var socialcredit = document.getElementById("cookie");
                     var clicker = document.getElementById("clicker");
                     var element = socialcredit.cloneNode(true);
-                    document.getElementById("socialcreditimages").appendChild(element);
+                    document.getElementById("cookies").appendChild(element);
                     element.classList.remove("toheaven");
                     element.style.left = getRndInteger(300, 300 + clicker.width) + "px";
                     element.style.top = getRndInteger(300, 100 + clicker.height) + "px";
@@ -250,8 +250,8 @@ impl Component for Minigame {
                       <input type="checkbox" checked={self.toggle_music} class="custom-control-input selectDisable" id="customSwitch2" onclick={ctx.link().callback(|_| Msg::ToggleMusic)}/>
                       <label class="custom-control-label selectDisable" for="customSwitch2">{"Music"}</label>
                     </div>
-                    <audio id="redsunintheskys" controls=true>
-                      <source src="../../../assets/redsunintheskysrock.mp3" type="audio/mpeg" />
+                    <audio id="monke" controls=true>
+                      <source src="../../../assets/monke.mp3" type="audio/mpeg" />
                     </audio>
                 </nav>
                 <div id="totalcredit" class="selectDisable">
@@ -263,19 +263,19 @@ impl Component for Minigame {
                       <label class="custom-control-label selectDisable" for="customSwitch3">{"Shop"}</label>
                     </div>
                     <div id="shop-items">
-                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::ZhongXina)}>{"Zhong Xina 0 SC"}</button><br/>
-                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::EggMan)}>{"Eggman 2500 SC"}</button><br/>
-                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::TheWok)}>{"The wok 10000 SC"}</button><br/>
-                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::SuperIdol)}>{"Super idol 50000 SC"}</button><br/>
-                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::XiJinPing)}>{"Xi jin ping 120000 SC"}</button><br/>
+                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::PlainCookies)}>{"Plain Cookies 0 Cookies"}</button><br/>
+                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::SugarCookies)}>{"Sugar Cookies 2500 Cookies"}</button><br/>
+                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::PeanutButterCookies)}>{"Peanut Butter Cookies 10000 Cookies"}</button><br/>
+                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::Oreos)}>{"Oreos 50000 Cookies"}</button><br/>
+                        <button class="btn btn-primary btn-rounded btn-sm nav-button selectDisable" onclick={ctx.link().callback(|_| Msg::ReesesPuffs)}>{"Reeses Puffs 120000 Cookies"}</button><br/>
                         <h6 class="selectDisable">{self.log_msg}</h6>
                     </div>
                 </div>
-                <div id="socialcreditimages">
-                    <img id="socialcredit" class="toheaven selectDisable" src="../../../assets/images/minigame/socialcredit.jpg" style="position:absolute; top:100px; left:100px; width:200px"/>
+                <div id="cookies">
+                    <img id="cookie" class="toheaven selectDisable" src="../../../assets/images/cookieclicker/cookie.png" style="position:absolute; top:100px; left:100px; width:200px"/>
                 </div>
 
-                <img id="clicker" class="mx-auto d-block fixed-bottom selectDisable" src="../../../assets/images/minigame/johnxina.png" alt="?" height="400px" width="800px" onclick = {ctx.link().callback(|_| Msg::Click)}/>
+                <img id="clicker" class="mx-auto d-block fixed-bottom selectDisable" src="../../../assets/images/cookieclicker/cookie.png" alt="?" height="400px" width="400px" onclick = {ctx.link().callback(|_| Msg::Click)}/>
             </div>
         }
     }
